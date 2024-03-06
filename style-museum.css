@@ -31,7 +31,7 @@ nav{
     max-height: 7vh;
     z-index: 1000;
     position: fixed;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 @media (max-width: 800px) {
@@ -39,9 +39,16 @@ nav{
         margin-left: 25px;
         width: 90%;
     }
-}
 
-.sticky-top {
+    #myVideo {
+        width: 00%;
+        height: auto;
+        min-height: 20vh;
+        position: block;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
 }
 
 .nav-scrolled{
@@ -922,13 +929,19 @@ div .modal-content img{
   /*=================== FOOTER ===================*/
  
   .footer {
-    height: 50vh;
+    height: 85vh;
     background-color: #1a2c44;
+    text-align: center;
   }
 
   .footer h1, .footer p{
     color: #fff;
-    text-align: center;
+  }
+
+  .footer div i{
+    color: #fffdf5;
+    font-size: 30px;
+    margin: 10px;
   }
 
   /*=================== FOOTER BACKGROUND ===================*/
@@ -985,3 +998,215 @@ div .modal-content img{
       background-position-x: -1000px; 
     }
   }
+
+  /*================ CON-US ================*/
+  .con-us {
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.item1 {
+    width: 100%;
+    height: 550px;
+    max-width: 820px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    z-index: 1000;
+}
+
+
+.contact {
+    background: #fff;
+}
+
+
+.submit-form {
+    background: #1a2c44;
+}
+
+
+.first-text {
+    padding-left: 8px;
+    padding-top: 20px;
+    font-size: 35px;
+    color: #1a2c44;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+
+.picture {
+    height: 350px;
+    width: 350px;
+}
+
+
+.social-media {
+    display: flex;
+    list-style: none;
+    margin-left: 55px;
+}
+
+.social-media ul li {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+
+.social-media i {
+    background: #1a2c44;
+    padding: 5px;
+    border-radius: 15px;
+    transition: .3s;
+    color: #fff;
+}
+
+
+.social-media i:hover {
+    background: #fff;
+    color: #1a2c44;
+}
+
+
+.secnd-text {
+    font-weight: 500;
+    color: #1a2c44;
+    padding-left: 20px;
+}
+
+
+.third-text {
+    font-size: 25px;
+    position: relative;
+    top: 50px;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+
+form {
+    padding: 50px 50px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.input-box {
+    height: 40px;
+    width: 70%;
+    margin: 15px 0;
+    position: relative;
+}
+
+
+.input {
+    width: 140%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    padding-left: 10px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    transition: .3s;
+}
+
+
+.input-box .input:focus~label,
+.input-box .input:valid~label {
+    top: -1px;
+    left: 10px;
+    background: #1a2c44;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 5px;
+}
+
+
+textarea.input {
+    resize: none;
+    min-height: 150px;
+    overflow: auto;
+    padding-top: 10px;
+}
+
+
+input.btn {
+    position: relative;
+    top: 120px;
+    background: #1a2c44;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 45px;
+    width: 30%;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+input.btn:hover {
+    color: #1a2c44;
+    background: #fff;
+    border: 1px solid#1234cc;
+}
+
+@media(max-width:850px) {
+    .item1 {
+        grid-template-columns: 1fr;
+    }
+    .contact {
+        display: none;
+    }
+    .text {
+        font-size: 40px;
+        text-align: center;
+    }
+    .btn {
+        width: 25%;
+        height: 40px;
+        font-size: 12px;
+    }
+}
+
+
+@media(max-width:480px) {
+    .item1 {
+        grid-template-columns: 1fr;
+    }
+    .contact {
+        display: none;
+    }
+    .text {
+        font-size: 20px;
+        text-align: center;
+    }
+    .btn {
+        width: 20%;
+        height: 40px;
+        font-size: 12px;
+    }
+}
